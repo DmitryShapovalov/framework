@@ -70,7 +70,6 @@
 		50D1B8F2D26991FFA41B7CCB0A5AB5E7 /* PipelineSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEE0BB5FBCBE5D575AB83F4719BE2E7 /* PipelineSteps.swift */; };
 		53F46533A2355446E1D94C270394816A /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D92DA4685B3FDCFE0D9716EA1A7DCA /* APIClient.swift */; };
 		54816B6193F3CA5711E384A6D5E5C8F2 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5A88388859D8D9C8DC9CA97B811E86 /* DatabaseManager.swift */; };
-		5510562E4CE8FE49458B40C6460975BC /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7F91898FAD0D8FD126E99EC8A7B398 /* Reachability.m */; };
 		565F025067FE8C9E4B3F59829C4E5A8B /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E372E7F18ACF38E827E76754E6350CB3 /* MapViewModel.swift */; };
 		586AB9A6DE9AE3AC29D967107A1A4FF9 /* TaskCompletionSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEE2EF9C20DBA4E9C2FBF73E9F923D9 /* TaskCompletionSource.swift */; };
 		5B00C2D6324111FCC8CB557B18F4A233 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A38D56B4127679919B69893D6F66AE1 /* DataStore.swift */; };
@@ -78,7 +77,6 @@
 		5C3DEF206281BCDC68B2301B71BA7337 /* SceneTransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8274A663730E06C27EB8D3B99E1F8897 /* SceneTransitionType.swift */; };
 		5CFCF54A00AF0E60862EBC07981F456E /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575E10FB3B86C47B3A14EF572BADCB8 /* AuthManager.swift */; };
 		5D47E2D184456F2C8114CF20CF31E785 /* CoreLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6D1EA5194FA7A248C7136257843BC8 /* CoreLocationManager.swift */; };
-		5F78B8F7CA5027917BBD629308FE679B /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 42D896A4AB1AD74154E6500513655B41 /* Reachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		60519E2704700DAFBBE5355639DEEFC4 /* TripListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97711C714918CC0753EE63334D624062 /* TripListViewModel.swift */; };
 		6386BCF2BE74C5FD6A59A4BCE354BA01 /* SceneCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F081A433C8D5D4C7BBFCB48E10A8D8D5 /* SceneCoordinatorType.swift */; };
 		64FC1230AD9E324D5E6C6CA27F15DF2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 971E006691CE5E552CC536BF4AB1FF8C /* Assets.xcassets */; };
@@ -97,7 +95,6 @@
 		79F438CEB28FAC39F8AFC731E019A178 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457BA21194DFD10249258DA78CC38A2 /* FoundationExtensions.swift */; };
 		7A006E50EAFD7F7BF712C478EE8BBCA3 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D462532C06960064938F499E3C85C9D4 /* DeviceInfo.swift */; };
 		7A241C6BBF340208F1BBD55414299C07 /* Task+Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9E7393064DB40117507E8D7DFF197A /* Task+Delay.swift */; };
-		7D44F4AEC6E853B114117C8AE143585E /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7F91898FAD0D8FD126E99EC8A7B398 /* Reachability.m */; };
 		7DF98979681DAF6418250A0768803C7D /* TripMarkerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A837ADBD7D48071BF697F7BF42BD6045 /* TripMarkerViewController.swift */; };
 		806A00570EB558E88A6B20A46C3D6FB0 /* MKLocalSearchCompleter+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A9D4C4AEB63A50871CBB4111372243 /* MKLocalSearchCompleter+Rx.swift */; };
 		82DE3A6D2126DEE77C17376CE080233B /* ServiceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFCBAD67DFA6109693A79124A407F29 /* ServiceProtocols.swift */; };
@@ -269,7 +266,6 @@
 		2E20CDB43C3E7C56C11AC73A61769266 /* Dispatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
 		2EB3581B3B9568136C6FA8E4379F869E /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		2EEA9BC1B831A21A49B76F5D6CA58023 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
-		2F7F91898FAD0D8FD126E99EC8A7B398 /* Reachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		30A676501FAEB8ABF0DFE6F6301A0D4C /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		315F74D8DD61F7E3791CF18A /* Pods-HyperTrack-SDKTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyperTrack-SDKTest.debug.xcconfig"; path = "Target Support Files/Pods-HyperTrack-SDKTest/Pods-HyperTrack-SDKTest.debug.xcconfig"; sourceTree = "<group>"; };
 		32910E536C885C0C617CACCBAC597D3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -277,7 +273,6 @@
 		36D92DA4685B3FDCFE0D9716EA1A7DCA /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		396CF85CEAAE2728A4EBC60FEB923FDD /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		39C7DDE00BC581E096C9742AF4D9FA28 /* Trips.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Trips.h; sourceTree = "<group>"; };
-		42D896A4AB1AD74154E6500513655B41 /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		43422EE7B46679FDCB7E0E1BF832DC05 /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
 		46E233C6293E93DDD9A14E9C5BB87AED /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
 		487FBFC213E6E7EA823CD91EF9D08160 /* LocationTrackingMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTrackingMode.swift; sourceTree = "<group>"; };
@@ -785,8 +780,6 @@
 				0159E574780E127163512EFF83978177 /* APIClient.swift */,
 				0E52095CA62CEEC9CD9030784C4AADB5 /* APIEndpoint.swift */,
 				7841054F09E4E08FD0C99FDFC2B2CC33 /* ApiRouter.swift */,
-				42D896A4AB1AD74154E6500513655B41 /* Reachability.h */,
-				2F7F91898FAD0D8FD126E99EC8A7B398 /* Reachability.m */,
 				03D1D3820DF285A81AE8502192482DE5 /* ReachabilityManager.swift */,
 				9F1BF932B494C5EE4250C8D6DD982271 /* Request.swift */,
 				871885FAA781307B3675CE233D765298 /* Response.swift */,
@@ -902,7 +895,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FF6BBC8FBAE9B83ABAADA18A4D476D3 /* HyperTrack.h in Headers */,
-				5F78B8F7CA5027917BBD629308FE679B /* Reachability.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1299,7 +1291,6 @@
 				15821B01C78A510F1BEE0F6ED7EAD893 /* PrivacyDataTypes.swift in Sources */,
 				682B4E0CF3AAA32B4A55159E15535553 /* PrivateDataAccessProvider.swift in Sources */,
 				CFAA9F4FB4465A0EA3D6FCEC362BD2FE /* Provider.swift in Sources */,
-				5510562E4CE8FE49458B40C6460975BC /* Reachability.m in Sources */,
 				8F36EF032EC58F29BF03F2EAE3307A1C /* ReachabilityManager.swift in Sources */,
 				39418DA6957AB0FE6534023443F0A930 /* Repeater.swift in Sources */,
 				C43C1E55F133F3D255F202106EFA01AA /* Request.swift in Sources */,
@@ -1372,7 +1363,6 @@
 				D02A05D1C0A997B482E81EA6345E078C /* PrivacyDataTypes.swift in Sources */,
 				0354747C477FADCD5ED049679A2630E5 /* PrivateDataAccessProvider.swift in Sources */,
 				4F3B8BC29EC7AD7F9A5EC0E35CB6335E /* Provider.swift in Sources */,
-				7D44F4AEC6E853B114117C8AE143585E /* Reachability.m in Sources */,
 				C8DA8E91ACD12C708F7ED3A56F70C5FE /* ReachabilityManager.swift in Sources */,
 				E6753B925BBFA260E3A99D0ADC4E856D /* Repeater.swift in Sources */,
 				22A9BCA61994227AA3A239BBF67F477A /* Request.swift in Sources */,

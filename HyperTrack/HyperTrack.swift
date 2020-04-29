@@ -1,4 +1,4 @@
-import enum UIKit.UIBackgroundFetchResult
+import UIKit
 
 /// Adds support for Xcode 10.1 that doesn't have Swift 5 compiler and new
 /// Result type

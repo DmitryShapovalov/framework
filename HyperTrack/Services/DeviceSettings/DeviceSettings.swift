@@ -1,3 +1,5 @@
+import Foundation
+
 protocol AbstractSettings: AnyObject {
   func getSettings()
 }

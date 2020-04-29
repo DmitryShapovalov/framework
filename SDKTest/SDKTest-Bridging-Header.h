@@ -9,6 +9,4 @@
 #ifndef SDKTest_Bridging_Header_h
 #define SDKTest_Bridging_Header_h
 
-#import "Reachability.h"
-
 #endif /* SDKTest_Bridging_Header_h */
