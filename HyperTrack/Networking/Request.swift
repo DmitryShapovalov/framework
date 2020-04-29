@@ -59,30 +59,6 @@ final class Request {
         var statusCode: Int = 0
         var htError: SDKError?
 
-        // Handle HTTP errors.
-        errorCheck: if let httpResponse = httpResponse {
-          statusCode = httpResponse.statusCode
-
-          if statusCode <= 299 { break errorCheck }
-          if statusCode >= 400, statusCode <= 403, let data = data,
-            let errorPayload = try? JSONSerialization.jsonObject(
-              with: data,
-              options: []
-            ) as? [String: Any], let payload = errorPayload {
-            var errorMessage: String = ""
-            if let message = payload["error"] as? String {
-              errorMessage = message
-            }
-            htError = SDKError(
-              ErrorType(rawValue: statusCode),
-              message: errorMessage
-            )
-          } else { htError = SDKError(code: statusCode) }
-          logResponse.error(
-            "Failed to execute the request: \(prettyPrintURLRequest(self.urlRequest)) with error: \(prettyPrintSDKError(htError))"
-          )
-        }
-
         // Any other errors.
         if (response == nil && !emptyDataStatusCodes.contains(statusCode))
           || error != nil {
