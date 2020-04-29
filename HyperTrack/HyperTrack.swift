@@ -389,14 +389,7 @@ public final class HyperTrack {
     ///
     /// - Parameter jsonString: A string that can be serialized to JSON.
     public init?(jsonString: String) {
-      if let data = jsonString.data(using: .utf8),
-        let json = try? JSONSerialization.jsonObject(
-          with: data,
-          options: .allowFragments
-        ) as? [String: Any], let unwrappedJSON = json
-      { self.rawValue = unwrappedJSON } else {
         return nil
-      }
     }
 
     static func isDictionaryJSONSerializable(_ dictionary: [String: Any])

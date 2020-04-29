@@ -90,30 +90,6 @@ final class DeviceSettings: AbstractSettings {
 
   private func receivedDeviceSettings(_ response: Response) {
     guard let data = response.data else { return }
-    guard let initPipeline = initializationPipeline else { return }
-    guard let serviceManager = self.serviceManager else { return }
-    if let payload = try? JSONSerialization.jsonObject(
-      with: data,
-      options: JSONSerialization.ReadingOptions.allowFragments
-    ) as? [String: Any], let data = payload {
-      logSettings.info("Received device settings: \(data)")
-      if let isStartTracking = data[Constant.ServerKeys.DeviceSettings.tracking]
-        as? String,
-        let state = Constant.ServerKeys.TrackingState(
-          rawValue: isStartTracking
-        ) {
-        switch state {
-          case .stopTracking: initPipeline.stopTracking(for: .settingsStop)
-          case .startTracking:
-            if serviceManager.numberOfRunningServices()
-              != serviceManager.numberOfServices()
-            { initPipeline.startTracking(for: .settingsStart) } else {
-              logSettings
-                .info("Attempt to \(#function), when tracking is started")
-            }
-        }
-      }
-    }
   }
 }
 
