@@ -8,12 +8,12 @@ let package = Package(
       .library(name: "HyperTrack", targets: ["HyperTrack"]),
   ],
   dependencies: [
-    .package(url: "https://github.com/groue/GRDB.swift.git", "4.4.0")
+    .package(url: "https://github.com/groue/GRDB.swift.git", from: "4.4.0")
   ],
   targets: [
     .target(
       name: "HyperTrack",
-      dependencies: ["GRDB"]
-    )
+      dependencies: ["GRDB"],
+      path: "HyperTrack")
   ]
 )
