@@ -1,9 +1,12 @@
-// swift-tools-version:4.2
+// swift-tools-version:5.1
 
 import PackageDescription
 
 let package = Package(
   name: "HyperTrack",
+  platforms: [
+    .iOS(.v12),
+  ],
   products: [
       .library(name: "HyperTrack", targets: ["HyperTrack"]),
   ],
@@ -14,10 +17,7 @@ let package = Package(
     .target(
       name: "HyperTrack",
       dependencies: ["GRDB"],
-      path: "HyperTrack",
-      exclude: [
-          "objectivec",
-      ])
+      path: "HyperTrack")
   ],
   swiftLanguageVersions: [.v4_2, .version("5")]
 )

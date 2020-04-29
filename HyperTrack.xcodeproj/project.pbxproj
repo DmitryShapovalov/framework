@@ -564,7 +564,7 @@
 				BE716943DEE24D2B26D55554FEE1F9BF /* State */,
 				9D2DC0AF77A25CA8D36AD5452848726C /* Transmission */,
 				80B1737EED00DE97399E079D56D2981E /* Utility */,
-				A7568E823D515FD3E620442347C2199F /* HyperTrack.h */,
+				B41C9D1B2459F43600DDDD98 /* Support */,
 				49E3C8C6CDD91E9A089C17522FE3D229 /* HyperTrack.swift */,
 				32910E536C885C0C617CACCBAC597D3C /* Info.plist */,
 			);
@@ -725,6 +725,14 @@
 			);
 			path = EventBus;
 			sourceTree = "<group>";
+		};
+		B41C9D1B2459F43600DDDD98 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				A7568E823D515FD3E620442347C2199F /* HyperTrack.h */,
+			);
+			path = Support;
+			sourceTree = SOURCE_ROOT;
 		};
 		BE716943DEE24D2B26D55554FEE1F9BF /* State */ = {
 			isa = PBXGroup;
@@ -1601,7 +1609,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 4.0.2;
+				MARKETING_VERSION = 4.0.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hypertrack.sdk;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
@@ -1690,7 +1698,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 4.0.2;
+				MARKETING_VERSION = 4.0.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hypertrack.sdk;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
