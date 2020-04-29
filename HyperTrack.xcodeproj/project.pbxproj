@@ -54,7 +54,6 @@
 		3DB535D7D6EBE3E84059F5155DE4A03F /* TransmissionPipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E02E22C203CA79795CDA3101D058EC /* TransmissionPipeline.swift */; };
 		3DEC53890F39F6C739C2BFDC153FF854 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ABF58C3A70D000CA579356C160247F /* Event.swift */; };
 		3E7087F30F84450AC771FD4E6B75DD7E /* AbstractEventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A633574E52E5D3361AA87443D5C29D72 /* AbstractEventBus.swift */; };
-		4033649D228B4419A355E2D5A9B34834 /* HTSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482A33F2E612B7EE55C6C40EC7C8375 /* HTSDK.swift */; };
 		4155BFF2D791B8790F8A31F81E0BC7DE /* TrackingStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C754143A7BE199AB0F52B24E72445A8 /* TrackingStateMachine.swift */; };
 		41DE545C39E4A4B9C4AE3F97 /* Pods_HyperTrack_SDKTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B78DCAC6DFC0528E2412BCF2 /* Pods_HyperTrack_SDKTest.framework */; };
 		4537793732E0C90102D93288E1A81161 /* Task+ContinueWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001606E0AF9253ED238C9A30C5E87132 /* Task+ContinueWith.swift */; };
@@ -243,7 +242,6 @@
 		001606E0AF9253ED238C9A30C5E87132 /* Task+ContinueWith.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+ContinueWith.swift"; sourceTree = "<group>"; };
 		0159E574780E127163512EFF83978177 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		03D1D3820DF285A81AE8502192482DE5 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
-		0482A33F2E612B7EE55C6C40EC7C8375 /* HTSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTSDK.swift; sourceTree = "<group>"; };
 		0824EDADE05CE9F40DAB74A829F5B340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		095BD11BC49B0A1E0287AF936E698C69 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		0A3A1E384B9FDB61806ED2093833BE7B /* Observable+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Rx.swift"; sourceTree = "<group>"; };
@@ -566,7 +564,6 @@
 				BE716943DEE24D2B26D55554FEE1F9BF /* State */,
 				9D2DC0AF77A25CA8D36AD5452848726C /* Transmission */,
 				80B1737EED00DE97399E079D56D2981E /* Utility */,
-				0482A33F2E612B7EE55C6C40EC7C8375 /* HTSDK.swift */,
 				A7568E823D515FD3E620442347C2199F /* HyperTrack.h */,
 				49E3C8C6CDD91E9A089C17522FE3D229 /* HyperTrack.swift */,
 				32910E536C885C0C617CACCBAC597D3C /* Info.plist */,
@@ -1348,7 +1345,6 @@
 				6BF9DBAC79D95EDBB751761763ABFC5C /* FoundationExtensions.swift in Sources */,
 				8FE6A01DAA1873318EB30167A256DA13 /* GCDRepeatingTimer.swift in Sources */,
 				A9BF2CD765D98C1FDD14361278F63E88 /* GRDBManager.swift in Sources */,
-				4033649D228B4419A355E2D5A9B34834 /* HTSDK.swift in Sources */,
 				14FC6A081E5CD22CFB564804CF5CB35F /* HealthBroadcastsReceiver.swift in Sources */,
 				758EDC76BB769CD2E111F58CC00AC769 /* HealthService.swift in Sources */,
 				1AD729387AEB0941447BE1BA18C43270 /* HealthServiceData.swift in Sources */,
