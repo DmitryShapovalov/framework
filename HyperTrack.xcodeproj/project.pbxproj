@@ -111,7 +111,6 @@
 		8F0ABAFDB977AB6782D2E159671687F8 /* AuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = F872491EA48069C34F1F8AE620DB0831 /* AuthToken.swift */; };
 		8F36EF032EC58F29BF03F2EAE3307A1C /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1D3820DF285A81AE8502192482DE5 /* ReachabilityManager.swift */; };
 		8FE6A01DAA1873318EB30167A256DA13 /* GCDRepeatingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C8A891F33A559A93B776D5ACC29DCC /* GCDRepeatingTimer.swift */; };
-		8FF6BBC8FBAE9B83ABAADA18A4D476D3 /* HyperTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = A7568E823D515FD3E620442347C2199F /* HyperTrack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		92564A1F82BF46AF27D64E93CBEE8375 /* LocationTrackingMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487FBFC213E6E7EA823CD91EF9D08160 /* LocationTrackingMode.swift */; };
 		9635A974BAAE5DC09CB57708B6657C11 /* HealthBroadcastsReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB2EC82F4B505BCED1EAC9E64AFF2BC /* HealthBroadcastsReceiver.swift */; };
 		96948A817914FA5B6BA1DDA94E6F3C0F /* GRDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CFA6FFFCED7CB7C479A326A28BBAF7 /* GRDBManager.swift */; };
@@ -136,6 +135,7 @@
 		AB954022532848D2FD4D6611B899AC8A /* DatabaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD8752194D5B49B1BC6A1404F228C99 /* DatabaseProtocol.swift */; };
 		AEDAA96006DA3036DC30E0CD143F5470 /* Task+WhenAny.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755998CFF8E0498C10EA7D11ECB8175A /* Task+WhenAny.swift */; };
 		B1408DDDA9473FF267B24E55C6FD06C5 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0159E574780E127163512EFF83978177 /* APIClient.swift */; };
+		B409675B245A0BE100B322C3 /* HyperTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = B409675A245A0BE000B322C3 /* HyperTrack.h */; };
 		B7ECC3D2D86031A4363A3745B997B091 /* ServiceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFCBAD67DFA6109693A79124A407F29 /* ServiceProtocols.swift */; };
 		B860DDE242FCE8747051E61EDD63DA84 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE5194EF6BF8A47C226B4A3ABEC273A /* Errors.swift */; };
 		B8C9526E372D92CE89440BA286F5E1FB /* Executor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65542A828A0A138E80DF03157279A1BA /* Executor.swift */; };
@@ -331,7 +331,6 @@
 		A6C8A891F33A559A93B776D5ACC29DCC /* GCDRepeatingTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDRepeatingTimer.swift; sourceTree = "<group>"; };
 		A6E0C5DFAEAFDE90AACD6727E21DBC9F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A713203D9121AA9235465540 /* Pods_HyperTrack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HyperTrack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7568E823D515FD3E620442347C2199F /* HyperTrack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HyperTrack.h; sourceTree = "<group>"; };
 		A7FDC9BD0D79F2E7FF66964AF9DB385C /* PrivateDataAccessProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateDataAccessProvider.swift; sourceTree = "<group>"; };
 		A837ADBD7D48071BF697F7BF42BD6045 /* TripMarkerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMarkerViewController.swift; sourceTree = "<group>"; };
 		AA7F50446BA3A2A69B93CD5B60616A43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -339,6 +338,7 @@
 		AEEE2EF9C20DBA4E9C2FBF73E9F923D9 /* TaskCompletionSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCompletionSource.swift; sourceTree = "<group>"; };
 		AF90A75ADD21E4A06FAB30B3A14EFCA4 /* Repeater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repeater.swift; sourceTree = "<group>"; };
 		B1ECD2589705D6920D428E87F5F0DB22 /* DisplayTripViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayTripViewModel.swift; sourceTree = "<group>"; };
+		B409675A245A0BE000B322C3 /* HyperTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyperTrack.h; sourceTree = "<group>"; };
 		B5411562F6340838F4CF236BE3FE6C6C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B702819A314FD376E1CFD76987D32DB4 /* Trips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trips.swift; sourceTree = "<group>"; };
 		B705A94006B6C75B8A67FCA7189B84EF /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
@@ -564,8 +564,8 @@
 				BE716943DEE24D2B26D55554FEE1F9BF /* State */,
 				9D2DC0AF77A25CA8D36AD5452848726C /* Transmission */,
 				80B1737EED00DE97399E079D56D2981E /* Utility */,
-				B41C9D1B2459F43600DDDD98 /* Support */,
 				49E3C8C6CDD91E9A089C17522FE3D229 /* HyperTrack.swift */,
+				B409675A245A0BE000B322C3 /* HyperTrack.h */,
 				32910E536C885C0C617CACCBAC597D3C /* Info.plist */,
 			);
 			path = HyperTrack;
@@ -725,14 +725,6 @@
 			);
 			path = EventBus;
 			sourceTree = "<group>";
-		};
-		B41C9D1B2459F43600DDDD98 /* Support */ = {
-			isa = PBXGroup;
-			children = (
-				A7568E823D515FD3E620442347C2199F /* HyperTrack.h */,
-			);
-			path = Support;
-			sourceTree = SOURCE_ROOT;
 		};
 		BE716943DEE24D2B26D55554FEE1F9BF /* State */ = {
 			isa = PBXGroup;
@@ -899,7 +891,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FF6BBC8FBAE9B83ABAADA18A4D476D3 /* HyperTrack.h in Headers */,
+				B409675B245A0BE100B322C3 /* HyperTrack.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
