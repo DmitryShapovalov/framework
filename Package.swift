@@ -18,5 +18,6 @@ let package = Package(
       exclude: [
           "objectivec",
       ])
-  ]
+  ],
+  swiftLanguageVersions: [.v4_2, .version("5")]
 )
