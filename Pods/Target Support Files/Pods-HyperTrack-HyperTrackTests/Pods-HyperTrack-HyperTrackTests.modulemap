@@ -1,0 +1,6 @@
+framework module Pods_HyperTrack_HyperTrackTests {
+  umbrella header "Pods-HyperTrack-HyperTrackTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

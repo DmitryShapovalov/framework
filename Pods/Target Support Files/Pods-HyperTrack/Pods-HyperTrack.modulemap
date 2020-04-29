@@ -1,0 +1,6 @@
+framework module Pods_HyperTrack {
+  umbrella header "Pods-HyperTrack-umbrella.h"
+
+  export *
+  module * { export * }
+}
