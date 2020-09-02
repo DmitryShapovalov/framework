@@ -23,6 +23,6 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
       .binaryTarget(name: "HyperTrack",
                     url: "https://s3-us-west-2.amazonaws.com/sdk-config.hypertrack.com/HyperTrack.xcframework.zip",
-                    checksum: "edd0521623749f6507d965cf83c3a3f1fb1e7aea")
+                    checksum: "60a5118aed4da1d95972dfccf26b5c052ba0ef5cdcd7975b8b4eab8154a696ca")
     ]
 )
