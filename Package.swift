@@ -22,7 +22,7 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
       .binaryTarget(name: "HyperTrack",
-                    url: "https://github.com/DmitryShapovalov/framework/raw/master/HyperTrack.xcframework.zip",
+                    url: "https://s3-us-west-2.amazonaws.com/sdk-config.hypertrack.com/HyperTrack.xcframework.zip",
                     checksum: "edd0521623749f6507d965cf83c3a3f1fb1e7aea")
     ]
 )
