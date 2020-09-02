@@ -1,6 +1,0 @@
-framework module Pods_HyperTrack_Trips {
-  umbrella header "Pods-HyperTrack-Trips-umbrella.h"
-
-  export *
-  module * { export * }
-}
