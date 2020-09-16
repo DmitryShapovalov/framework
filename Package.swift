@@ -22,4 +22,4 @@ let package = Package(
           checksum: "e22654e0c996686f229c27065d553c782d507730bb57da01f271d2ac34ce20f1"
       )
     ]
-}
+  )
