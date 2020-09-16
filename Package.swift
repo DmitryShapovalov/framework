@@ -19,8 +19,7 @@ let package = Package(
       .binaryTarget(
           name: "HyperTrackTestFramework",
           url: "https://github.com/DmitryShapovalov/framework/releases/download/4.0.29/HyperTrackTestFramework.zip",
-          checksum: "70c78e00e9dd1a7defc75bf2f1f7cf1617a62cfc"
+          checksum: "e22654e0c996686f229c27065d553c782d507730bb57da01f271d2ac34ce20f1"
       )
     ]
-)
-
+}
