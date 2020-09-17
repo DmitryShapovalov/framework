@@ -17,7 +17,8 @@ let package = Package(
           targets: [name]),
     ],
     targets: [
-      .binaryTarget(name: "HyperTrack.xcframework", path: "HyperTrack.xcframework")
+      .binaryTarget(name: "HyperTrack.xcframework",
+                    path: "/HyperTrack.xcframework")
     ],
   swiftLanguageVersions: [
     .v5
