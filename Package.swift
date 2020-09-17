@@ -3,23 +3,23 @@
 
 import PackageDescription
 
+let name = "HyperTrack"
+let version = "5.0.0"
+
 let package = Package(
-    name: "HyperTrackTestFramework",
+    name: name,
     platforms: [
-        .iOS(.v11)
+      .iOS(.v11)
     ],
     products: [
-        .library(
-            name: "HyperTrackTestFramework",
-            targets: ["HyperTrackTestFramework"]),
-    ],
-    dependencies: [
+      .library(
+          name: name,
+          targets: [name]),
     ],
     targets: [
-      .binaryTarget(
-          name: "HyperTrackTestFramework",
-          url: "https://github.com/DmitryShapovalov/framework/releases/download/4.0.29/HyperTrackTestFramework.zip",
-          checksum: "e22654e0c996686f229c27065d553c782d507730bb57da01f271d2ac34ce20f1"
-      )
-    ]
-  )
+      .binaryTarget(name: "HyperTrack.xcframework", path: "HyperTrack.xcframework")
+    ],
+  swiftLanguageVersions: [
+    .v5
+  ]
+)
