@@ -1,0 +1,234 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name HyperTrack
+import CoreLocation.CLLocation
+import CoreMotion.CMMotionActivity
+import CoreMotion.CMPedometer
+import Compression
+import CoreLocation
+import CoreMotion
+import CoreTelephony
+import Foundation
+@_exported import HyperTrack
+import SQLite3
+import Swift
+import UIKit
+import UIKit/*.UIBackgroundFetchResult*/
+import os.log
+import os
+import zlib
+extension FloatingPoint {
+  @inlinable public func isAlmostEqual(to other: Self, tolerance: Self = Self.ulpOfOne.squareRoot()) -> Swift.Bool {
+    // tolerances outside of [.ulpOfOne,1) yield well-defined but useless results,
+    // so this is enforced by an assert rathern than a precondition.
+    assert(
+      tolerance >= .ulpOfOne && tolerance < 1,
+      "tolerance should be in [.ulpOfOne, 1)."
+    )
+    // The simple computation below does not necessarily give sensible
+    // results if one of self or other is infinite; we need to rescale
+    // the computation in that case.
+    guard isFinite, other.isFinite else {
+      return rescaledAlmostEqual(to: other, tolerance: tolerance)
+    }
+    // This should eventually be rewritten to use a scaling facility to be
+    // defined on FloatingPoint suitable for hypot and scaled sums, but the
+    // following is good enough to be useful for now.
+    let scale = max(abs(self), abs(other), .leastNormalMagnitude)
+    return abs(self - other) < scale * tolerance
+  }
+  @inlinable public func isAlmostZero(absoluteTolerance tolerance: Self = Self.ulpOfOne.squareRoot()) -> Swift.Bool {
+    assert(tolerance > 0)
+    return abs(self) < tolerance
+  }
+  @usableFromInline
+  internal func rescaledAlmostEqual(to other: Self, tolerance: Self) -> Swift.Bool
+}
+final public class GCDRepeatingTimer {
+  final public var timeInterval: Foundation.TimeInterval
+  final public var repeating: Swift.Bool
+  public init(timeInterval: Foundation.TimeInterval, repeating: Swift.Bool = true)
+  final public var eventHandler: (() -> Swift.Void)?
+  public enum State {
+    case suspended
+    case resumed
+    public static func == (a: HyperTrack.GCDRepeatingTimer.State, b: HyperTrack.GCDRepeatingTimer.State) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  @objc deinit
+  final public func resume()
+  final public func suspend()
+  final public func reset(timeInterval: Foundation.TimeInterval)
+}
+final public class HyperTrack {
+  @available(*, deprecated, message: "`HyperTrackStartedTracking` was deprecated.")
+  public static let startedTrackingNotification: Foundation.Notification.Name
+  @available(*, deprecated, message: "`HyperTrackStoppedTracking` was deprecated.")
+  public static let stoppedTrackingNotification: Foundation.Notification.Name
+  @available(*, deprecated, message: "`HyperTrackDidEncounterRestorableError` was deprecated.")
+  public static let didEncounterRestorableErrorNotification: Foundation.Notification.Name
+  @available(*, deprecated, message: "`HyperTrackDidEncounterUnrestorableError` was deprecated.")
+  public static let didEncounterUnrestorableErrorNotification: Foundation.Notification.Name
+  final public let deviceID: Swift.String
+  public init(publishableKey: HyperTrack.HyperTrack.PublishableKey, automaticallyRequestPermissions: Swift.Bool = true) throws
+  public static func makeSDK(publishableKey: HyperTrack.HyperTrack.PublishableKey, automaticallyRequestPermissions: Swift.Bool = true) -> Swift.Result<HyperTrack.HyperTrack, HyperTrack.HyperTrack.FatalError>
+  final public var isRunning: Swift.Bool {
+    get
+  }
+  final public func setDeviceName(_ deviceName: Swift.String)
+  final public func setDeviceMetadata(_ metadata: HyperTrack.HyperTrack.Metadata)
+  final public func start()
+  final public func stop()
+  final public func syncDeviceSettings()
+  final public func addGeotag(_ tag: HyperTrack.HyperTrack.Metadata)
+  public static func registerForRemoteNotifications()
+  public static func didRegisterForRemoteNotificationsWithDeviceToken(_ deviceToken: Foundation.Data)
+  public static func didFailToRegisterForRemoteNotificationsWithError(_ error: Swift.Error)
+  public static func didReceiveRemoteNotification(_ userInfo: [Swift.AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIKit.UIBackgroundFetchResult) -> Swift.Void)
+  public struct PublishableKey {
+    public init?(_ publishableKey: Swift.String)
+    public init(_ firstCharacter: Swift.Character, _ restOfTheKey: Swift.String)
+  }
+  public struct Metadata : Swift.RawRepresentable {
+    public typealias RawValue = [Swift.String : Any]
+    public let rawValue: HyperTrack.HyperTrack.Metadata.RawValue
+    public init()
+    public init?(rawValue: HyperTrack.HyperTrack.Metadata.RawValue)
+    public init?(dictionary: [Swift.String : Any])
+    public init?(jsonString: Swift.String)
+  }
+  public enum FatalError : Swift.Error {
+    case developmentError(HyperTrack.HyperTrack.DevelopmentError)
+    case productionError(HyperTrack.HyperTrack.ProductionError)
+    public var developmentError: HyperTrack.HyperTrack.DevelopmentError? {
+      get
+    }
+    public var productionError: HyperTrack.HyperTrack.ProductionError? {
+      get
+    }
+  }
+  public enum DevelopmentError : Swift.Error {
+    case missingLocationUpdatesBackgroundModeCapability
+    case runningOnSimulatorUnsupported
+    public static func == (a: HyperTrack.HyperTrack.DevelopmentError, b: HyperTrack.HyperTrack.DevelopmentError) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  public enum ProductionError : Swift.Error {
+    case locationServicesUnavalible
+    case motionActivityServicesUnavalible
+    @available(*, deprecated, message: "Motion permissions denied before initialization no longer produces an error.")
+    case motionActivityPermissionsDenied
+    public static func == (a: HyperTrack.HyperTrack.ProductionError, b: HyperTrack.HyperTrack.ProductionError) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  public enum RestorableError : Swift.Error {
+    case locationPermissionsNotDetermined
+    case motionActivityPermissionsNotDetermined
+    case locationPermissionsCantBeAskedInBackground
+    case motionActivityPermissionsCantBeAskedInBackground
+    case locationPermissionsRestricted
+    case motionActivityPermissionsRestricted
+    case locationPermissionsDenied
+    case locationPermissionsInsufficientForBackground
+    case locationServicesDisabled
+    case motionActivityServicesDisabled
+    case networkConnectionUnavailable
+    case trialEnded
+    case paymentDefault
+    public static func == (a: HyperTrack.HyperTrack.RestorableError, b: HyperTrack.HyperTrack.RestorableError) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  public enum UnrestorableError : Swift.Error {
+    case invalidPublishableKey
+    case motionActivityPermissionsDenied
+    public static func == (a: HyperTrack.HyperTrack.UnrestorableError, b: HyperTrack.HyperTrack.UnrestorableError) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  public enum TrackingError {
+    case restorableError(HyperTrack.HyperTrack.RestorableError)
+    case unrestorableError(HyperTrack.HyperTrack.UnrestorableError)
+    public var restorableError: HyperTrack.HyperTrack.RestorableError? {
+      get
+    }
+    public var unrestorableError: HyperTrack.HyperTrack.UnrestorableError? {
+      get
+    }
+  }
+  @available(*, deprecated, message: "Use addGeoTag: instead.")
+  final public func addTripMarker(_ marker: HyperTrack.HyperTrack.Metadata)
+  @objc deinit
+}
+extension Notification {
+  public func hyperTrackTrackingError() -> HyperTrack.HyperTrack.TrackingError?
+  public func hyperTrackRestorableError() -> HyperTrack.HyperTrack.RestorableError?
+  public func hyperTrackUnrestorableError() -> HyperTrack.HyperTrack.UnrestorableError?
+}
+@available(iOS 10.0, *)
+extension OSLog {
+  @inlinable internal func log(_ value: Swift.String, file: Swift.String, function: Swift.String, line: Swift.Int) {
+    _log(
+      value: value,
+      file: file,
+      function: function,
+      line: line,
+      type: .default
+    )
+  }
+  @inlinable internal func info(_ value: Swift.String, file: Swift.String, function: Swift.String, line: Swift.Int) {
+      // @workaround for simulator bug in Xcode 10.2 and earlier:
+      // https://forums.developer.apple.com/thread/82736#348090
+      let type = OSLogType.default
+    _log(value: value, file: file, function: function, line: line, type: type)
+  }
+  @inlinable internal func trace(file: Swift.String, function: Swift.String, line: Swift.Int) {
+      // @workaround for simulator bug in Xcode 10.2 and earlier:
+      // https://forums.developer.apple.com/thread/82736#348090
+      let type = OSLogType.default
+    _log(
+      value: "<OSLog.trace>",
+      file: file,
+      function: function,
+      line: line,
+      type: type
+    )
+  }
+  @inlinable internal func debug(_ value: Swift.String, file: Swift.String, function: Swift.String, line: Swift.Int) {
+      // @workaround for simulator bug in Xcode 10.2 and earlier:
+      // https://forums.developer.apple.com/thread/82736#348090
+      let type = OSLogType.default
+    _log(value: value, file: file, function: function, line: line, type: type)
+  }
+  @inlinable internal func error(_ value: Swift.String, file: Swift.String, function: Swift.String, line: Swift.Int) {
+    _log(value: value, file: file, function: function, line: line, type: .error)
+  }
+  @inlinable internal func fault(_ value: Swift.String, file: Swift.String, function: Swift.String, line: Swift.Int) {
+    _log(value: value, file: file, function: function, line: line, type: .fault)
+  }
+  @usableFromInline
+  internal func _log(value: Swift.String, file: Swift.String, function: Swift.String, line: Swift.Int, type: os.OSLogType)
+}
+extension HyperTrack.GCDRepeatingTimer.State : Swift.Equatable {}
+extension HyperTrack.GCDRepeatingTimer.State : Swift.Hashable {}
+extension HyperTrack.HyperTrack.DevelopmentError : Swift.Equatable {}
+extension HyperTrack.HyperTrack.DevelopmentError : Swift.Hashable {}
+extension HyperTrack.HyperTrack.ProductionError : Swift.Equatable {}
+extension HyperTrack.HyperTrack.ProductionError : Swift.Hashable {}
+extension HyperTrack.HyperTrack.RestorableError : Swift.Equatable {}
+extension HyperTrack.HyperTrack.RestorableError : Swift.Hashable {}
+extension HyperTrack.HyperTrack.UnrestorableError : Swift.Equatable {}
+extension HyperTrack.HyperTrack.UnrestorableError : Swift.Hashable {}
