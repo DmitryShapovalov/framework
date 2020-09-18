@@ -174,9 +174,9 @@ final public class HyperTrack {
   @objc deinit
 }
 extension Notification {
-  public func hyperTrackTrackingError() -> TrackingError?
-  public func hyperTrackRestorableError() -> RestorableError?
-  public func hyperTrackUnrestorableError() -> UnrestorableError?
+  public func hyperTrackTrackingError() -> HyperTrack.TrackingError?
+  public func hyperTrackRestorableError() -> HyperTrack.RestorableError?
+  public func hyperTrackUnrestorableError() -> HyperTrack.UnrestorableError?
 }
 @available(iOS 10.0, *)
 extension OSLog {
@@ -224,11 +224,11 @@ extension OSLog {
 }
 extension GCDRepeatingTimer.State : Swift.Equatable {}
 extension GCDRepeatingTimer.State : Swift.Hashable {}
-extension DevelopmentError : Swift.Equatable {}
-extension DevelopmentError : Swift.Hashable {}
-extension ProductionError : Swift.Equatable {}
-extension ProductionError : Swift.Hashable {}
-extension RestorableError : Swift.Equatable {}
-extension RestorableError : Swift.Hashable {}
-extension UnrestorableError : Swift.Equatable {}
-extension UnrestorableError : Swift.Hashable {}
+extension HyperTrack.DevelopmentError : Swift.Equatable {}
+extension HyperTrack.DevelopmentError : Swift.Hashable {}
+extension HyperTrack.ProductionError : Swift.Equatable {}
+extension HyperTrack.ProductionError : Swift.Hashable {}
+extension HyperTrack.RestorableError : Swift.Equatable {}
+extension HyperTrack.RestorableError : Swift.Hashable {}
+extension HyperTrack.UnrestorableError : Swift.Equatable {}
+extension HyperTrack.UnrestorableError : Swift.Hashable {}
