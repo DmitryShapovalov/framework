@@ -63,103 +63,6 @@ final public class GCDRepeatingTimer {
   final public func suspend()
   final public func reset(timeInterval: Foundation.TimeInterval)
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers final public class HTMetadata : ObjectiveC.NSObject {
-  @objc override convenience dynamic public init()
-  @objc convenience public init?(dictionary: [Swift.String : Any])
-  @objc convenience public init?(jsonString: Swift.String)
-  @objc deinit
-}
-@objc @_hasMissingDesignatedInitializers @objcMembers final public class HTSDK : ObjectiveC.NSObject {
-  @objc @available(*, deprecated, message: "`HyperTrackStartedTracking` was deprecated.")
-  public static let startedTrackingNotification: Foundation.NSNotification.Name
-  @objc @available(*, deprecated, message: "`HyperTrackStoppedTracking` was deprecated.")
-  public static let stoppedTrackingNotification: Foundation.NSNotification.Name
-  @objc @available(*, deprecated, message: "`HyperTrackDidEncounterRestorableError` was deprecated.")
-  public static let didEncounterRestorableErrorNotification: Foundation.NSNotification.Name
-  @objc @available(*, deprecated, message: "`HyperTrackDidEncounterUnrestorableError` was deprecated.")
-  public static let didEncounterUnrestorableErrorNotification: Foundation.NSNotification.Name
-  @objc final public let deviceID: Swift.String
-  @objc convenience public init?(publishableKey: Swift.String)
-  @objc convenience public init?(publishableKey: Swift.String, automaticallyRequestPermissions: Swift.Bool = true)
-  @objc public static func makeSDK(publishableKey: Swift.String) -> HyperTrack.HTResult
-  @objc public static func makeSDK(publishableKey: Swift.String, automaticallyRequestPermissions: Swift.Bool = true) -> HyperTrack.HTResult
-  @objc final public var isRunning: Swift.Bool {
-    @objc get
-  }
-  @objc final public func setDeviceName(_ deviceName: Swift.String)
-  @objc final public func setDeviceMetadata(_ metadata: HyperTrack.HTMetadata)
-  @objc final public func start()
-  @objc final public func stop()
-  @objc final public func syncDeviceSettings()
-  @objc final public func addGeotag(_ tag: HyperTrack.HTMetadata)
-  @objc public static func registerForRemoteNotifications()
-  @objc public static func didRegisterForRemoteNotificationsWithDeviceToken(_ deviceToken: Foundation.Data)
-  @objc public static func didFailToRegisterForRemoteNotificationsWithError(_ error: Swift.Error)
-  @objc public static func didReceiveRemoteNotification(_ userInfo: [Swift.AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIKit.UIBackgroundFetchResult) -> Swift.Void)
-  @objc @available(*, deprecated, message: "Use addGeoTag: instead.")
-  final public func addTripMarker(_ marker: HyperTrack.HTMetadata)
-  @objc deinit
-  @objc override dynamic public init()
-}
-@objc extension NSError {
-  @objc public static let HTFatalErrorDomain: Swift.String
-  @objc public static let HTRestorableErrorDomain: Swift.String
-  @objc public static let HTUnrestorableErrorDomain: Swift.String
-}
-@objc public enum HTFatalError : Swift.Int {
-  case developmentPublishableKeyIsEmpty = -4110
-  case developmentMissingLocationUpdatesBackgroundModeCapability = -4111
-  case developmentRunningOnSimulatorUnsupported = -4112
-  case productionLocationServicesUnavalible = -4121
-  case productionMotionActivityServicesUnavalible = -4122
-  @available(*, deprecated, message: "Motion permissions denied before initialization no longer produces an error.")
-  case productionMotionActivityPermissionsDenied = -4123
-  public typealias RawValue = Swift.Int
-  public init?(rawValue: Swift.Int)
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc public enum HTRestorableError : Swift.Int {
-  case locationPermissionsDenied = -4200
-  case locationServicesDisabled = -4201
-  case motionActivityServicesDisabled = -4202
-  case networkConnectionUnavailable = -4203
-  case trialEnded = -4204
-  case paymentDefault = -4205
-  case locationPermissionsNotDetermined = -4206
-  case locationPermissionsRestricted = -4207
-  case motionActivityPermissionsNotDetermined = -4208
-  case locationPermissionsInsufficientForBackground = -4209
-  case locationPermissionsCantBeAskedInBackground = -4210
-  case motionActivityPermissionsCantBeAskedInBackground = -4211
-  case motionActivityPermissionsRestricted = -4212
-  public typealias RawValue = Swift.Int
-  public init?(rawValue: Swift.Int)
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc public enum HTUnrestorableError : Swift.Int {
-  case invalidPublishableKey = -4300
-  case motionActivityPermissionsDenied = -4301
-  public typealias RawValue = Swift.Int
-  public init?(rawValue: Swift.Int)
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc @_hasMissingDesignatedInitializers @objcMembers final public class HTResult : ObjectiveC.NSObject {
-  @objc final public let hyperTrack: HyperTrack.HTSDK?
-  @objc final public let error: Foundation.NSError?
-  @objc deinit
-  @objc override dynamic public init()
-}
-@objc extension NSNotification {
-  @objc dynamic public func hyperTrackTrackingError() -> Foundation.NSError?
-  @objc dynamic public func hyperTrackRestorableError() -> Foundation.NSError?
-  @objc dynamic public func hyperTrackUnrestorableError() -> Foundation.NSError?
-}
 final public class HyperTrack {
   @available(*, deprecated, message: "`HyperTrackStartedTracking` was deprecated.")
   public static let startedTrackingNotification: Foundation.Notification.Name
@@ -319,8 +222,113 @@ extension OSLog {
   @usableFromInline
   internal func _log(value: Swift.String, file: Swift.String, function: Swift.String, line: Swift.Int, type: os.OSLogType)
 }
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers final public class HTMetadata : ObjectiveC.NSObject {
+  @objc override convenience dynamic public init()
+  @objc convenience public init?(dictionary: [Swift.String : Any])
+  @objc convenience public init?(jsonString: Swift.String)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class HTSDK : ObjectiveC.NSObject {
+  @objc @available(*, deprecated, message: "`HyperTrackStartedTracking` was deprecated.")
+  public static let startedTrackingNotification: Foundation.NSNotification.Name
+  @objc @available(*, deprecated, message: "`HyperTrackStoppedTracking` was deprecated.")
+  public static let stoppedTrackingNotification: Foundation.NSNotification.Name
+  @objc @available(*, deprecated, message: "`HyperTrackDidEncounterRestorableError` was deprecated.")
+  public static let didEncounterRestorableErrorNotification: Foundation.NSNotification.Name
+  @objc @available(*, deprecated, message: "`HyperTrackDidEncounterUnrestorableError` was deprecated.")
+  public static let didEncounterUnrestorableErrorNotification: Foundation.NSNotification.Name
+  @objc final public let deviceID: Swift.String
+  @objc convenience public init?(publishableKey: Swift.String)
+  @objc convenience public init?(publishableKey: Swift.String, automaticallyRequestPermissions: Swift.Bool = true)
+  @objc public static func makeSDK(publishableKey: Swift.String) -> HyperTrack.HTResult
+  @objc public static func makeSDK(publishableKey: Swift.String, automaticallyRequestPermissions: Swift.Bool = true) -> HyperTrack.HTResult
+  @objc final public var isRunning: Swift.Bool {
+    @objc get
+  }
+  @objc final public func setDeviceName(_ deviceName: Swift.String)
+  @objc final public func setDeviceMetadata(_ metadata: HyperTrack.HTMetadata)
+  @objc final public func start()
+  @objc final public func stop()
+  @objc final public func syncDeviceSettings()
+  @objc final public func addGeotag(_ tag: HyperTrack.HTMetadata)
+  @objc public static func registerForRemoteNotifications()
+  @objc public static func didRegisterForRemoteNotificationsWithDeviceToken(_ deviceToken: Foundation.Data)
+  @objc public static func didFailToRegisterForRemoteNotificationsWithError(_ error: Swift.Error)
+  @objc public static func didReceiveRemoteNotification(_ userInfo: [Swift.AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIKit.UIBackgroundFetchResult) -> Swift.Void)
+  @objc @available(*, deprecated, message: "Use addGeoTag: instead.")
+  final public func addTripMarker(_ marker: HyperTrack.HTMetadata)
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc extension NSError {
+  @objc public static let HTFatalErrorDomain: Swift.String
+  @objc public static let HTRestorableErrorDomain: Swift.String
+  @objc public static let HTUnrestorableErrorDomain: Swift.String
+}
+@objc public enum HTFatalError : Swift.Int {
+  case developmentPublishableKeyIsEmpty = -4110
+  case developmentMissingLocationUpdatesBackgroundModeCapability = -4111
+  case developmentRunningOnSimulatorUnsupported = -4112
+  case productionLocationServicesUnavalible = -4121
+  case productionMotionActivityServicesUnavalible = -4122
+  @available(*, deprecated, message: "Motion permissions denied before initialization no longer produces an error.")
+  case productionMotionActivityPermissionsDenied = -4123
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum HTRestorableError : Swift.Int {
+  case locationPermissionsDenied = -4200
+  case locationServicesDisabled = -4201
+  case motionActivityServicesDisabled = -4202
+  case networkConnectionUnavailable = -4203
+  case trialEnded = -4204
+  case paymentDefault = -4205
+  case locationPermissionsNotDetermined = -4206
+  case locationPermissionsRestricted = -4207
+  case motionActivityPermissionsNotDetermined = -4208
+  case locationPermissionsInsufficientForBackground = -4209
+  case locationPermissionsCantBeAskedInBackground = -4210
+  case motionActivityPermissionsCantBeAskedInBackground = -4211
+  case motionActivityPermissionsRestricted = -4212
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum HTUnrestorableError : Swift.Int {
+  case invalidPublishableKey = -4300
+  case motionActivityPermissionsDenied = -4301
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class HTResult : ObjectiveC.NSObject {
+  @objc final public let hyperTrack: HyperTrack.HTSDK?
+  @objc final public let error: Foundation.NSError?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc extension NSNotification {
+  @objc dynamic public func hyperTrackTrackingError() -> Foundation.NSError?
+  @objc dynamic public func hyperTrackRestorableError() -> Foundation.NSError?
+  @objc dynamic public func hyperTrackUnrestorableError() -> Foundation.NSError?
+}
 extension HyperTrack.GCDRepeatingTimer.State : Swift.Equatable {}
 extension HyperTrack.GCDRepeatingTimer.State : Swift.Hashable {}
+extension HyperTrack.HyperTrack.DevelopmentError : Swift.Equatable {}
+extension HyperTrack.HyperTrack.DevelopmentError : Swift.Hashable {}
+extension HyperTrack.HyperTrack.ProductionError : Swift.Equatable {}
+extension HyperTrack.HyperTrack.ProductionError : Swift.Hashable {}
+extension HyperTrack.HyperTrack.RestorableError : Swift.Equatable {}
+extension HyperTrack.HyperTrack.RestorableError : Swift.Hashable {}
+extension HyperTrack.HyperTrack.UnrestorableError : Swift.Equatable {}
+extension HyperTrack.HyperTrack.UnrestorableError : Swift.Hashable {}
 extension HyperTrack.HTFatalError : Swift.Equatable {}
 extension HyperTrack.HTFatalError : Swift.Hashable {}
 extension HyperTrack.HTFatalError : Swift.RawRepresentable {}
@@ -330,11 +338,3 @@ extension HyperTrack.HTRestorableError : Swift.RawRepresentable {}
 extension HyperTrack.HTUnrestorableError : Swift.Equatable {}
 extension HyperTrack.HTUnrestorableError : Swift.Hashable {}
 extension HyperTrack.HTUnrestorableError : Swift.RawRepresentable {}
-extension HyperTrack.HyperTrack.DevelopmentError : Swift.Equatable {}
-extension HyperTrack.HyperTrack.DevelopmentError : Swift.Hashable {}
-extension HyperTrack.HyperTrack.ProductionError : Swift.Equatable {}
-extension HyperTrack.HyperTrack.ProductionError : Swift.Hashable {}
-extension HyperTrack.HyperTrack.RestorableError : Swift.Equatable {}
-extension HyperTrack.HyperTrack.RestorableError : Swift.Hashable {}
-extension HyperTrack.HyperTrack.UnrestorableError : Swift.Equatable {}
-extension HyperTrack.HyperTrack.UnrestorableError : Swift.Hashable {}

@@ -4,7 +4,7 @@
 import PackageDescription
 
 let name = "HyperTrack"
-let version = "5.0.0"
+let version = "999.0.0"
 
 let package = Package(
     name: name,
