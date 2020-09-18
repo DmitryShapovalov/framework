@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/HyperTrack-Swift.h</key>
 		<data>
-		zMPUjal65FRYFBw0WLOhCSzdHA4=
+		Ybzvat0P/WxeO4q4AT/JIi1lpPk=
 		</data>
 		<key>Headers/HyperTrack.h</key>
 		<data>
@@ -26,51 +26,51 @@
 		</data>
 		<key>Modules/HyperTrack.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		ozHD1HLycZbo1Oayk888yNoYRDM=
+		Nmy/Kof33ut+R8uWiUsY6ZhatS4=
 		</data>
 		<key>Modules/HyperTrack.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		qGjnUNKDzJKDmUXLl31DZUJf/hM=
+		dNwojRzuyXGltvVhvDSeWAPOHWQ=
 		</data>
 		<key>Modules/HyperTrack.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		l6B91qTKNPTxdTzFnwnCAVJJl/4=
+		CvWb8EywdaFcmQ4Sd55LrinxDr8=
 		</data>
 		<key>Modules/HyperTrack.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		ozHD1HLycZbo1Oayk888yNoYRDM=
+		Nmy/Kof33ut+R8uWiUsY6ZhatS4=
 		</data>
 		<key>Modules/HyperTrack.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		qGjnUNKDzJKDmUXLl31DZUJf/hM=
+		dNwojRzuyXGltvVhvDSeWAPOHWQ=
 		</data>
 		<key>Modules/HyperTrack.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		l6B91qTKNPTxdTzFnwnCAVJJl/4=
+		CvWb8EywdaFcmQ4Sd55LrinxDr8=
 		</data>
 		<key>Modules/HyperTrack.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		ATmwIZxRFGeos0HhqRusioa4CZk=
+		FkjrHHqABKAv76oX7y2zPTuPByE=
 		</data>
 		<key>Modules/HyperTrack.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		YyMf0Wv6H0n4BRfqHJuxdF+CgYg=
+		CxeZqQNGanMR7bM7ZK8I8kq5Uc8=
 		</data>
 		<key>Modules/HyperTrack.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		nFl4NSPdZqghd6ptE5bH1WKXsoI=
+		QaR5cs+PB5gzZHTKCZeNvf0ed2o=
 		</data>
 		<key>Modules/HyperTrack.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		ATmwIZxRFGeos0HhqRusioa4CZk=
+		FkjrHHqABKAv76oX7y2zPTuPByE=
 		</data>
 		<key>Modules/HyperTrack.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		YyMf0Wv6H0n4BRfqHJuxdF+CgYg=
+		CxeZqQNGanMR7bM7ZK8I8kq5Uc8=
 		</data>
 		<key>Modules/HyperTrack.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		nFl4NSPdZqghd6ptE5bH1WKXsoI=
+		QaR5cs+PB5gzZHTKCZeNvf0ed2o=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -83,7 +83,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yCTcJiTMk+aR/B7vPZ0FIfMTNhcOoKCZO6apR45oBWs=
+			OJLoIwyL8XzQxOMXU+6noKwC98j1DULOJoiMvgCeLRE=
 			</data>
 		</dict>
 		<key>Headers/HyperTrack.h</key>
@@ -111,84 +111,84 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kuMsJiTlPw/RkkhQcJDfFLqZ+2BlMyI0N4nzD/Va5Yk=
+			Tn5yWNqxFtzGsQgNhU7aq7C7yIMmtCHY0oXvwajF/4g=
 			</data>
 		</dict>
 		<key>Modules/HyperTrack.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			b6WrRTiKWX23Ebh6hQN/efRzjZlYPJZ4qnG1XryArzU=
+			fzuLsdb8YxhQ7fvg1kEoipsv5nwFsm8d9a9+Jj3j3kc=
 			</data>
 		</dict>
 		<key>Modules/HyperTrack.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			J+ijD2gHe1Wiv7RbyQNqbNw5Epl8Mv0KiI/i1ObL8g4=
+			4XjR+AfWgB3OqbbA56ogTnsJNY2Wk3LSSEcHCYJVIbg=
 			</data>
 		</dict>
 		<key>Modules/HyperTrack.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kuMsJiTlPw/RkkhQcJDfFLqZ+2BlMyI0N4nzD/Va5Yk=
+			Tn5yWNqxFtzGsQgNhU7aq7C7yIMmtCHY0oXvwajF/4g=
 			</data>
 		</dict>
 		<key>Modules/HyperTrack.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			b6WrRTiKWX23Ebh6hQN/efRzjZlYPJZ4qnG1XryArzU=
+			fzuLsdb8YxhQ7fvg1kEoipsv5nwFsm8d9a9+Jj3j3kc=
 			</data>
 		</dict>
 		<key>Modules/HyperTrack.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			J+ijD2gHe1Wiv7RbyQNqbNw5Epl8Mv0KiI/i1ObL8g4=
+			4XjR+AfWgB3OqbbA56ogTnsJNY2Wk3LSSEcHCYJVIbg=
 			</data>
 		</dict>
 		<key>Modules/HyperTrack.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ybEb1+ik5aAHvfPvqXP12Kydy/BfT7ir/X4x6T3dNbg=
+			SlViRjteKmrYZZPaQ65TnUhTZp3cP5iW+dvjn/VFwA4=
 			</data>
 		</dict>
 		<key>Modules/HyperTrack.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hJW83tqICObWarSM9Ps0Vt5tJV8xHASrlABlni639h0=
+			tCutEFGNRBgjsYzka7eVIKlTwSKkdcO5j+lUcF8tP+c=
 			</data>
 		</dict>
 		<key>Modules/HyperTrack.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xNyBZmSMdY+o5Cbmo+ap7ZMZOS7ZT2x4MjvSYAqP1GA=
+			jPk31cFzRY+O9xh9OgJVdKt67ZFzt5aVPFf8xQimrMU=
 			</data>
 		</dict>
 		<key>Modules/HyperTrack.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ybEb1+ik5aAHvfPvqXP12Kydy/BfT7ir/X4x6T3dNbg=
+			SlViRjteKmrYZZPaQ65TnUhTZp3cP5iW+dvjn/VFwA4=
 			</data>
 		</dict>
 		<key>Modules/HyperTrack.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hJW83tqICObWarSM9Ps0Vt5tJV8xHASrlABlni639h0=
+			tCutEFGNRBgjsYzka7eVIKlTwSKkdcO5j+lUcF8tP+c=
 			</data>
 		</dict>
 		<key>Modules/HyperTrack.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xNyBZmSMdY+o5Cbmo+ap7ZMZOS7ZT2x4MjvSYAqP1GA=
+			jPk31cFzRY+O9xh9OgJVdKt67ZFzt5aVPFf8xQimrMU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
