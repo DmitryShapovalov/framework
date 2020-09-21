@@ -17,8 +17,11 @@ let package = Package(
           targets: [name]),
     ],
     targets: [
-      .binaryTarget(name: name,
-                    path: "HyperTrack.xcframework")
+    .binaryTarget(
+        name: name,
+        url: "https://github.com/DmitryShapovalov/framework/releases/download/4.0.36/HyperTrackTestFramework.zip",
+        checksum: "8e91fa14fbd6c60a0558e3802b0266bad12ae6f1530226958db1048a35940a40"
+    )
     ],
   swiftLanguageVersions: [
     .v5
