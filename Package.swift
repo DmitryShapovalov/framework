@@ -19,7 +19,7 @@ let package = Package(
     targets: [
     .binaryTarget(
         name: name,
-        url: "https://github.com/DmitryShapovalov/framework/releases/download/4.0.50-rc.2/HyperTrack.xcframework.zip",
+        url: "https://github.com/DmitryShapovalov/framework/releases/download/4.0.51-rc.1/HyperTrack.xcframework.zip",
         checksum: "8e91fa14fbd6c60a0558e3802b0266bad12ae6f1530226958db1048a35940a40"
     )
     ],
